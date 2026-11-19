@@ -47,21 +47,21 @@ ChildhoodMalnutritionHealth/
 
 ## Key Visualizations
 
-The primary analytical outputs are stored in the `notebooks/` directory:
+The primary analytical outputs are stored in the `output/` directory:
 
 | Figure | File | Description |
 | :--- | :--- | :--- |
-| **Figure 1** | `notebooks/Fig1_EDA_Overview.png` | High-level overview of the dataset and malnutrition status distributions. |
-| **Figure 2** | `notebooks/Fig2_Correlation_Matrix.png` | Correlation matrix highlighting relationships between key clinical and socioeconomic variables. |
-| **Figure 3** | `notebooks/Fig3_Statistical_Drivers.png` | Visualization of the most influential statistical drivers of malnutrition. |
-| **Figure 4** | `notebooks/Fig4_Latent_Score_and_CM.png` | Latent risk score distributions alongside model confusion matrix results. |
-| **Figure 5** | `notebooks/Fig5_Clinical_Risk_Scoring.png` | Breakdown and validation of the proposed clinical risk scoring thresholds. |
-| **Figure 6** | `notebooks/Fig6_Scoring_System_Infographic.png` | End-to-end visual summary of the clinical scoring system. |
+| **Figure 1** | `ouput/Fig1_EDA_Overview.png` | High-level overview of the dataset and malnutrition status distributions. |
+| **Figure 2** | `output/Fig2_Correlation_Matrix.png` | Correlation matrix highlighting relationships between key clinical and socioeconomic variables. |
+| **Figure 3** | `output/Fig3_Statistical_Drivers.png` | Visualization of the most influential statistical drivers of malnutrition. |
+| **Figure 4** | `output/Fig4_Latent_Score_and_CM.png` | Latent risk score distributions alongside model confusion matrix results. |
+| **Figure 5** | `output/Fig5_Clinical_Risk_Scoring.png` | Breakdown and validation of the proposed clinical risk scoring thresholds. |
+| **Figure 6** | `output/Fig6_Scoring_System_Infographic.png` | End-to-end visual summary of the clinical scoring system. |
 
 ### Preview
 
-![EDA Overview](notebooks/Fig1_EDA_Overview.png)
-![Scoring System Infographic](notebooks/Fig6_Scoring_System_Infographic.png)
+![EDA Overview](output/Fig1_EDA_Overview.png)
+![Scoring System Infographic](output/Fig6_Scoring_System_Infographic.png)
 
 ---
 
@@ -98,18 +98,16 @@ This project uses **[uv](https://docs.astral.sh/uv/)** for fast, reproducible Py
    ```bash
    uv run jupyter lab
    ```
-   Open `notebooks/Childhood_Malnutrition_Publication.ipynb` to explore or reproduce the full analysis.
+   Open `output/Childhood_Malnutrition_Publication.ipynb` to explore or reproduce the full analysis.
 
 ---
 
 ## Results Summary
 
-> **Tip:** Replace the placeholders below with your final model metrics and key clinical findings.
-
-- **Dataset Size:** $n = 15,000$ records
-- **Top Statistical Drivers:** *[Add top 3–5 predictors here]*
-- **Model Performance:** *[Add AUC-ROC, Accuracy, Sensitivity, or Specificity here]*
-- **Risk Tiers:** *[Add Low / Moderate / High risk score cutoffs here]*
+- **Dataset Size:** $n = 15,000$ records (cleaned of 'None' string-parsing artifacts).
+- S**tatistical Rigor:** Significant drivers validated across ANOVA, Kruskal-Wallis, and Chi-square tests with Bonferroni and FDR multiple-testing corrections.
+- **Latent Model Performance:** Exact latent severity score formulation recovered with $100\%$ classification label match.
+- **Clinical Risk Scoring:** Standardized 4-pillar ($0\text{--}100$) risk index exported to data/Childhood_Malnutrition_Scored.csv for interpretable bedside/field triage.
 
 ---
 
