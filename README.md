@@ -15,20 +15,21 @@
 ```text
 ChildhoodMalnutritionHealth/
 ├── data/
-│   └── Childhood_Malnutrition_Dataset.csv      # Raw dataset
+│   ├── Childhood_Malnutrition_Dataset.csv        # Raw dataset (n = 15,000)
+│   └── Childhood_Malnutrition_Scored.csv         # Output dataset with 0–100 clinical risk scores
 ├── notebooks/
-│   ├── Childhood_Malnutrition_Publication.ipynb # Main analysis & modeling notebook
-│   ├── Childhood_Malnutrition_Scored.csv        # Output dataset with risk scores
-│   ├── Fig1_EDA_Overview.png                    # Exploratory data analysis overview
-│   ├── Fig2_Correlation_Matrix.png              # Feature correlation heatmap
-│   ├── Fig3_Statistical_Drivers.png             # Key statistical drivers of malnutrition
-│   ├── Fig4_Latent_Score_and_CM.png             # Latent score distribution & confusion matrix
-│   ├── Fig5_Clinical_Risk_Scoring.png           # Clinical risk scoring evaluation
-│   └── Fig6_Scoring_System_Infographic.png      # Summary infographic of the scoring system
+│   └── Childhood_Malnutrition_Publication.ipynb  # Main analysis, statistical testing & modeling notebook
+├── output/
+│   ├── Fig1_EDA_Overview.png                     # Exploratory data analysis overview
+│   ├── Fig2_Correlation_Matrix.png               # Feature correlation heatmap
+│   ├── Fig3_Statistical_Drivers.png              # Key statistical drivers of malnutrition
+│   ├── Fig4_Latent_Score_and_CM.png              # Latent score distribution & confusion matrix
+│   ├── Fig5_Clinical_Risk_Scoring.png            # Clinical risk scoring evaluation
+│   └── Fig6_Scoring_System_Infographic.png       # Summary infographic of the scoring system
 ├── .gitignore
-├── .python-version                              # Python version specification (3.13.14)
-├── pyproject.toml                               # Project metadata and dependencies
-├── uv.lock                                      # Locked dependency tree
+├── .python-version                               # Python version specification (3.13.14)
+├── pyproject.toml                                # Project metadata and dependencies
+├── uv.lock                                       # Locked dependency tree
 └── README.md
 ```
 
